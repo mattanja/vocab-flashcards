@@ -38,4 +38,9 @@ export const messagesEn: Record<MessageKey, string> = {
   of: '{current} / {total}',
   exampleSetLabel: 'Example set',
   swipeHint: 'Swipe or use the buttons',
+  installTitle: 'Install app',
+  installBody: 'Add to your home screen — learn offline without the browser chrome.',
+  installAction: 'Install',
+  installDismiss: 'Dismiss',
+  installIosHint: 'Tap Share, then “Add to Home Screen”.',
 }

@@ -36,6 +36,11 @@ export const messagesDe = {
   of: '{current} / {total}',
   exampleSetLabel: 'Beispielset',
   swipeHint: 'Wischen oder Buttons tippen',
+  installTitle: 'App installieren',
+  installBody: 'Zum Homescreen hinzufügen — offline lernen, ohne Browser-Leiste.',
+  installAction: 'Installieren',
+  installDismiss: 'Schließen',
+  installIosHint: 'Tippe auf Teilen und dann „Zum Home-Bildschirm“.',
 } as const
 
 export type MessageKey = keyof typeof messagesDe

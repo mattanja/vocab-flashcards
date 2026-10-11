@@ -1,0 +1,80 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+      url: ${{ vars.PUBLIC_URL || 'https://vocab.ironbrain.de' }}
+    env:
+      PUBLIC_URL: ${{ vars.PUBLIC_URL || 'https://vocab.ironbrain.de' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm run test:run
+
+      - name: Build
+        run: npm run build
+
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.VOCAB_DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.VOCAB_DEPLOY_KNOWN_HOSTS }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Upload
+        env:
+          DEPLOY_HOST: ${{ secrets.VOCAB_DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.VOCAB_DEPLOY_USER }}
+        run: |
+          # Output is suppressed on purpose (public logs); only the exit code is reported.
+          set +e
+          rsync -rlz --delete --delete-after --delay-updates --chmod=D755,F644 \
+            -e "ssh -i $HOME/.ssh/deploy_key -o IdentitiesOnly=yes -o BatchMode=yes -o StrictHostKeyChecking=yes -o LogLevel=QUIET" \
+            dist/ "$DEPLOY_USER@$DEPLOY_HOST:./" > /dev/null 2>&1
+          rc=$?
+          if [ "$rc" -ne 0 ]; then
+            echo "Upload failed (exit code $rc)"
+            exit 1
+          fi
+          echo "Upload OK"
+
+      - name: Smoke test
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$PUBLIC_URL/")
+          echo "index: $code"
+          asset=$(grep -o '/assets/[^"]*\.js' dist/index.html | head -n 1)
+          acode=$(curl -s -o /dev/null -w '%{http_code}' "$PUBLIC_URL$asset")
+          echo "asset: $acode"
+          [ "$code" = 200 ] && [ "$acode" = 200 ]
+
+      - name: Clean up SSH
+        if: always()
+        run: rm -f ~/.ssh/deploy_key ~/.ssh/known_hosts

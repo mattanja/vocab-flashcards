@@ -26,7 +26,7 @@ export function FlashCard({
       onClick={interactive ? onFlip : undefined}
       disabled={!interactive}
       aria-label={flipped ? answer : prompt}
-      className="relative block h-72 w-full select-none rounded-3xl text-left perspective-[1200px] disabled:cursor-default"
+      className="relative block h-80 w-full touch-none select-none rounded-3xl text-left perspective-[1200px] disabled:cursor-default"
     >
       <div
         className={`relative h-full w-full transition-transform duration-300 [transform-style:preserve-3d] ${
@@ -45,18 +45,18 @@ export function FlashCard({
           )}
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-center overflow-y-auto rounded-3xl border border-black/5 bg-[var(--card)] px-6 py-6 shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div className="absolute inset-0 flex flex-col justify-center overflow-hidden rounded-3xl border border-black/5 bg-[var(--card)] px-5 py-5 shadow-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
             {direction === 'de-fr' ? 'Français' : 'Deutsch'}
           </p>
-          <p className="text-3xl font-semibold leading-snug text-[var(--ink)]">{answer}</p>
+          <p className="text-2xl font-semibold leading-snug text-[var(--ink)] sm:text-3xl">{answer}</p>
 
           {card.phonetic && (
-            <p className="mt-3 font-mono text-lg text-[var(--accent)]">[{card.phonetic}]</p>
+            <p className="mt-2 font-mono text-base text-[var(--accent)]">[{card.phonetic}]</p>
           )}
 
           {card.forms && (
-            <div className="mt-4 rounded-2xl bg-[var(--bg-accent)] px-3 py-2">
+            <div className="mt-3 rounded-2xl bg-[var(--bg-accent)] px-3 py-2">
               <p className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">
                 {t('forms')}
               </p>
@@ -65,7 +65,7 @@ export function FlashCard({
           )}
 
           {card.explanation && (
-            <div className="mt-3 rounded-2xl border border-black/5 bg-white/70 px-3 py-2">
+            <div className="mt-2 rounded-2xl border border-black/5 bg-white/70 px-3 py-2">
               <p className="text-xs font-semibold uppercase tracking-wide text-[var(--muted)]">
                 {t('explanation')}
               </p>

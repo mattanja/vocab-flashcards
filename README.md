@@ -9,6 +9,7 @@ Mobile-first flashcard app for learning vocabulary (German ↔ French). Progress
 - Random queue; when the queue is empty, continue with the “not yet” pile
 - Browse the “I know” pile
 - Direction toggle (DE→FR / FR→DE) and UI language (DE / EN)
+- Installable PWA (service worker + offline cache, home-screen install)
 - Static production build for simple hosting
 
 ## Local development
@@ -27,7 +28,9 @@ npm run build
 npm run preview   # optional local check of dist/
 ```
 
-Deploy the contents of `dist/` to any static host (nginx, S3, Netlify, GitHub Pages, `python -m http.server`, …).
+Deploy the contents of `dist/` to any static host (nginx, S3, Netlify, GitHub Pages, …).
+
+PWA install works best over **HTTPS** (or `localhost`). After deploy, Chromium-based browsers can show an install prompt; on iOS use Share → Add to Home Screen.
 
 The vocabulary JSON is copied to `dist/sets/bonjour-de-nice-unite-6.json`.
 
@@ -65,4 +68,5 @@ See `public/sets/bonjour-de-nice-unite-6.json`:
 
 - Vite + React + TypeScript
 - Tailwind CSS v4
+- vite-plugin-pwa (Workbox)
 - Vitest + React Testing Library

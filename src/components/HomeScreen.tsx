@@ -1,6 +1,7 @@
 import { useI18n } from '../i18n'
 import * as storage from '../lib/storage'
 import type { VocabSet } from '../types'
+import { InstallPrompt } from './InstallPrompt'
 
 type Props = {
   vocabSet: VocabSet | null
@@ -54,6 +55,8 @@ export function HomeScreen({
         <h1 className="text-3xl font-semibold tracking-tight">{t('appTitle')}</h1>
         <p className="mt-2 text-[var(--muted)]">{t('appSubtitle')}</p>
       </header>
+
+      <InstallPrompt />
 
       <section className="rounded-3xl border border-black/5 bg-[var(--card)] p-5 shadow-sm">
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">

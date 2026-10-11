@@ -60,7 +60,7 @@ export function StudyScreen({
   }
 
   return (
-    <div className="flex min-h-dvh flex-col px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-[max(1rem,env(safe-area-inset-top))]">
+    <div className="flex min-h-dvh flex-col overflow-x-hidden px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-[max(1rem,env(safe-area-inset-top))]">
       <header className="mb-4 flex items-start justify-between gap-3">
         <button type="button" onClick={onHome} className="text-sm text-[var(--muted)]">
           ← {t('backHome')}
