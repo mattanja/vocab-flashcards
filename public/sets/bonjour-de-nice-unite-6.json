@@ -1,0 +1,288 @@
+{
+  "id": "bonjour-de-nice-unite-6",
+  "title": "Bonjour de Nice – Unité 6",
+  "description": "Révision classe 6 – Vocabulaire Unité 6 (p.186–188)",
+  "sourceLanguage": "fr",
+  "targetLanguage": "de",
+  "cards": [
+    {
+      "id": "une-ville",
+      "source": "une ville",
+      "target": "eine Stadt",
+      "phonetic": "ynvil"
+    },
+    {
+      "id": "entre",
+      "source": "entre",
+      "target": "zwischen",
+      "phonetic": "ɑ̃tʀ"
+    },
+    {
+      "id": "la-mer",
+      "source": "la mer",
+      "target": "das Meer",
+      "phonetic": "lamɛʀ"
+    },
+    {
+      "id": "la-mediterranee",
+      "source": "la Méditerranée",
+      "target": "das Mittelmeer",
+      "phonetic": "lameditɛʀane"
+    },
+    {
+      "id": "une-montagne",
+      "source": "une montagne",
+      "target": "ein Gebirge",
+      "phonetic": "ynmɔ̃taɲ"
+    },
+    {
+      "id": "contacter-qn",
+      "source": "contacter qn",
+      "target": "mit jdm. in Verbindung treten; jdn. kontaktieren",
+      "phonetic": "kɔ̃takte"
+    },
+    {
+      "id": "les-vacances",
+      "source": "les vacances",
+      "target": "der Urlaub; die Ferien",
+      "phonetic": "levakɑ̃s",
+      "forms": "f., pl."
+    },
+    {
+      "id": "passer-qc",
+      "source": "passer qc",
+      "target": "etwas verbringen",
+      "phonetic": "pase",
+      "explanation": "Zeit verbringen, z. B. les vacances / un stage."
+    },
+    {
+      "id": "un-stage",
+      "source": "un stage",
+      "target": "ein Praktikum; ein Kurs",
+      "phonetic": "ɛ̃staʒ"
+    },
+    {
+      "id": "un-sauvetage",
+      "source": "un sauvetage",
+      "target": "eine Rettung; eine Rettungsaktion",
+      "phonetic": "ɛ̃sovtaʒ"
+    },
+    {
+      "id": "une-sortie",
+      "source": "une sortie",
+      "target": "ein Ausgang; ein Ausflug",
+      "phonetic": "ynsɔʀti"
+    },
+    {
+      "id": "un-bateau",
+      "source": "un bateau",
+      "target": "ein Boot; ein Schiff",
+      "phonetic": "ɛ̃bato",
+      "forms": "pl. des bateaux [debato]"
+    },
+    {
+      "id": "visiter-qc",
+      "source": "visiter qc",
+      "target": "etw. besichtigen",
+      "phonetic": "vizite"
+    },
+    {
+      "id": "le-temps",
+      "source": "le temps",
+      "target": "das Wetter",
+      "phonetic": "lətɑ̃",
+      "explanation": "Le temps hat zwei Bedeutungen: die Zeit und das Wetter."
+    },
+    {
+      "id": "il-fait-quel-temps",
+      "source": "Il fait quel temps ?",
+      "target": "Wie ist das Wetter?",
+      "phonetic": "ilfɛkɛltɑ̃"
+    },
+    {
+      "id": "il-fait-beau",
+      "source": "Il fait beau.",
+      "target": "Es ist schönes Wetter.",
+      "phonetic": "ilfɛbo"
+    },
+    {
+      "id": "le-soleil",
+      "source": "le soleil",
+      "target": "die Sonne",
+      "phonetic": "ləsɔlɛj"
+    },
+    {
+      "id": "il-pleut",
+      "source": "Il pleut.",
+      "target": "Es regnet.",
+      "phonetic": "ilplø"
+    },
+    {
+      "id": "la-meteo",
+      "source": "la météo",
+      "target": "die Wettervorhersage",
+      "phonetic": "lameteo"
+    },
+    {
+      "id": "le-vent",
+      "source": "le vent",
+      "target": "der Wind",
+      "phonetic": "ləvɑ̃"
+    },
+    {
+      "id": "proposer-qc-a-qn",
+      "source": "proposer qc à qn",
+      "target": "jdm. etw. vorschlagen",
+      "phonetic": "pʀɔpoze"
+    },
+    {
+      "id": "une-visite",
+      "source": "une visite",
+      "target": "ein Besuch",
+      "phonetic": "ynvizit"
+    },
+    {
+      "id": "rigoler",
+      "source": "rigoler",
+      "target": "lachen (ugs.)",
+      "phonetic": "ʀigɔle",
+      "forms": "fam."
+    },
+    {
+      "id": "une-information",
+      "source": "une information",
+      "target": "eine Information",
+      "phonetic": "ynɛ̃fɔʀmasjɔ̃"
+    },
+    {
+      "id": "un-endroit",
+      "source": "un endroit",
+      "target": "ein Ort",
+      "phonetic": "ɛ̃nɑ̃dʀwa"
+    },
+    {
+      "id": "une-plage",
+      "source": "une plage",
+      "target": "ein Strand",
+      "phonetic": "ynplaʒ"
+    },
+    {
+      "id": "une-specialite",
+      "source": "une spécialité",
+      "target": "eine Besonderheit; eine Spezialität",
+      "phonetic": "ynspesjalite"
+    },
+    {
+      "id": "la-vieille-ville",
+      "source": "la vieille ville",
+      "target": "die Altstadt",
+      "phonetic": "lavjɛjvil"
+    },
+    {
+      "id": "une-colline",
+      "source": "une colline",
+      "target": "ein Hügel",
+      "phonetic": "ynkɔlin"
+    },
+    {
+      "id": "un-chateau",
+      "source": "un château",
+      "target": "ein Schloss",
+      "phonetic": "ɛ̃ʃato",
+      "forms": "pl. des châteaux [deʃato]",
+      "explanation": "La colline du château in Nizza ist heute ein Park mit Aussicht; das Schloss selbst gibt es schon lange nicht mehr."
+    },
+    {
+      "id": "un-restaurant",
+      "source": "un restaurant",
+      "target": "ein Restaurant",
+      "phonetic": "ɛ̃ʀɛstɔʀɑ̃"
+    },
+    {
+      "id": "montrer-qc-a-qn",
+      "source": "montrer qc à qn",
+      "target": "jdm. etw. zeigen",
+      "phonetic": "mɔ̃tʀe"
+    },
+    {
+      "id": "passer",
+      "source": "passer",
+      "target": "vorbeigehen; vorübergehen",
+      "phonetic": "pase",
+      "explanation": "Anders als passer qc (Zeit verbringen): hier vorbeigehen / vorübergehen."
+    },
+    {
+      "id": "un-batiment",
+      "source": "un bâtiment",
+      "target": "ein Bauwerk; ein Gebäude",
+      "phonetic": "ɛ̃batimɑ̃"
+    },
+    {
+      "id": "moderne",
+      "source": "moderne",
+      "target": "modern",
+      "phonetic": "mɔdɛʀn",
+      "forms": "Steigerung: plus moderne / le plus moderne"
+    },
+    {
+      "id": "une-glace",
+      "source": "une glace",
+      "target": "ein Eis",
+      "phonetic": "ynglas"
+    },
+    {
+      "id": "demander-qc-a-qn",
+      "source": "demander qc à qn",
+      "target": "jdn. etw. fragen; jdn. um etwas bitten",
+      "phonetic": "dəmɑ̃de"
+    },
+    {
+      "id": "donner-qc-a-qn",
+      "source": "donner qc à qn",
+      "target": "jdm. etw. geben",
+      "phonetic": "dɔne"
+    },
+    {
+      "id": "sauter",
+      "source": "sauter",
+      "target": "springen",
+      "phonetic": "sote"
+    },
+    {
+      "id": "poser-qc",
+      "source": "poser qc",
+      "target": "etw. legen; etw. stellen; etw. setzen",
+      "phonetic": "poze"
+    },
+    {
+      "id": "un-pied",
+      "source": "un pied",
+      "target": "ein Fuß",
+      "phonetic": "ɛ̃pje"
+    },
+    {
+      "id": "aider-qn",
+      "source": "aider qn",
+      "target": "jdm. helfen",
+      "phonetic": "ede"
+    },
+    {
+      "id": "avoir-mal",
+      "source": "avoir mal",
+      "target": "Schmerzen haben",
+      "phonetic": "avwaʀmal"
+    },
+    {
+      "id": "un-escalier",
+      "source": "un escalier",
+      "target": "eine Treppe",
+      "phonetic": "ɛ̃nɛskalje"
+    },
+    {
+      "id": "un-ascenseur",
+      "source": "un ascenseur",
+      "target": "ein Aufzug; ein Fahrstuhl",
+      "phonetic": "ɛ̃nasɑ̃sœʀ"
+    }
+  ]
+}
