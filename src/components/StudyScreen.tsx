@@ -87,6 +87,14 @@ export function StudyScreen({
         </div>
       </header>
 
+      <button
+        type="button"
+        onClick={onRestartAll}
+        className="mb-4 w-full text-center text-sm text-[var(--muted)] underline-offset-2 hover:underline"
+      >
+        {t('restartAll')}
+      </button>
+
       <div className="mb-4 flex flex-wrap gap-2 text-xs font-semibold">
         <span className="rounded-full bg-white/80 px-3 py-1.5 text-[var(--ink)]">
           {t('queue')}: {session.queueIds.length}
@@ -121,7 +129,7 @@ export function StudyScreen({
 
       <p className="mt-3 text-center text-xs text-[var(--muted)]">{t('swipeHint')}</p>
 
-      <div className="mt-auto grid grid-cols-2 gap-3 pt-6">
+      <div className="mt-auto grid grid-cols-2 gap-3 pt-6 pb-2">
         <button
           type="button"
           disabled={!flipped}
@@ -139,14 +147,6 @@ export function StudyScreen({
           {t('gradeKnown')}
         </button>
       </div>
-
-      <button
-        type="button"
-        onClick={onRestartAll}
-        className="mt-4 pb-2 text-center text-sm text-[var(--muted)] underline-offset-2 hover:underline"
-      >
-        {t('restartAll')}
-      </button>
     </div>
   )
 }
