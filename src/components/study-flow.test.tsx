@@ -50,7 +50,7 @@ describe('study flow', () => {
     const user = userEvent.setup()
     renderApp()
 
-    expect(await screen.findByText('Fixture Set')).toBeInTheDocument()
+    expect(await screen.findByRole('button', { name: 'Lernen starten' })).toBeInTheDocument()
     await user.click(screen.getByRole('button', { name: 'Lernen starten' }))
 
     const prompt = await screen.findByRole('button', { name: /eine Stadt|das Meer/ })

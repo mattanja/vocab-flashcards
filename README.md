@@ -5,6 +5,7 @@ Mobile-first flashcard app for learning vocabulary (German ↔ French). Progress
 ## Features
 
 - Built-in example set: **Bonjour de Nice – Unité 6**
+- Create custom sets (manual card-by-card form), import/export JSON files
 - Flip cards, then grade with swipe or buttons (**Kann ich** / **Kann ich noch nicht**)
 - Random queue; when the queue is empty, continue with the “not yet” pile
 - Browse the “I know” pile
@@ -41,7 +42,9 @@ npm test          # watch mode
 npm run test:run  # CI / single run
 ```
 
-## Example set format
+## Set format (import / export)
+
+Custom sets are stored in `localStorage`. Use **Load file** / **Save as file** on the home screen, or export while editing a set.
 
 See `public/sets/bonjour-de-nice-unite-6.json`:
 

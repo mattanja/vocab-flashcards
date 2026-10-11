@@ -1,10 +1,13 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import {
   clearProgress,
+  deleteCustomSet,
+  getCustomSets,
   getDirection,
   getLocale,
   getProgress,
   hasResumeableProgress,
+  saveCustomSet,
   setDirection,
   setLocale,
   setProgress,
@@ -36,5 +39,19 @@ describe('storage', () => {
     expect(hasResumeableProgress(progress)).toBe(true)
     clearProgress('demo')
     expect(getProgress('demo')).toBeNull()
+  })
+
+  it('stores custom sets', () => {
+    const set = {
+      id: 'mine',
+      title: 'Mine',
+      sourceLanguage: 'fr',
+      targetLanguage: 'de',
+      cards: [{ id: '1', source: 'oui', target: 'ja' }],
+    }
+    saveCustomSet(set)
+    expect(getCustomSets()).toEqual([set])
+    deleteCustomSet('mine')
+    expect(getCustomSets()).toEqual([])
   })
 })

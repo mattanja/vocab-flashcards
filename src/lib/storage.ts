@@ -1,4 +1,4 @@
-import type { Locale, StudyDirection, StudyProgress } from '../types'
+import type { Locale, StudyDirection, StudyProgress, VocabSet } from '../types'
 
 const PREFIX = 'vocab-flashcards:'
 
@@ -65,4 +65,26 @@ export function hasResumeableProgress(progress: StudyProgress | null): boolean {
     progress.unknownIds.length > 0 ||
     progress.knownIds.length > 0
   )
+}
+
+export function getCustomSets(): VocabSet[] {
+  const sets = readJson<VocabSet[]>(key('customSets'))
+  return Array.isArray(sets) ? sets : []
+}
+
+export function saveCustomSet(set: VocabSet): void {
+  const sets = getCustomSets().filter((item) => item.id !== set.id)
+  sets.unshift(set)
+  writeJson(key('customSets'), sets)
+}
+
+export function deleteCustomSet(setId: string): void {
+  writeJson(
+    key('customSets'),
+    getCustomSets().filter((item) => item.id !== setId),
+  )
+  clearProgress(setId)
+  if (getActiveSetId() === setId) {
+    localStorage.removeItem(key('activeSetId'))
+  }
 }

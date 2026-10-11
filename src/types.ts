@@ -11,8 +11,8 @@ export type VocabSet = {
   id: string
   title: string
   description?: string
-  sourceLanguage: 'fr'
-  targetLanguage: 'de'
+  sourceLanguage: string
+  targetLanguage: string
   cards: VocabCard[]
 }
 
@@ -27,4 +27,6 @@ export type StudyProgress = {
   session: number
 }
 
-export type Screen = 'home' | 'study' | 'known' | 'done'
+export type Screen = 'home' | 'study' | 'known' | 'done' | 'editSet'
+
+export type SetEditorMode = 'create' | 'edit'
